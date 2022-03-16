@@ -1,0 +1,26 @@
+import com.sun.org.apache.xalan.internal.xsltc.cmdline.Compile
+
+import static jdk.nashorn.internal.objects.NativeRegExp.compile
+
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'net.java.jinput:applet:2.0.9'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+    testCompileOnly('junit:junit:4.12')
+    compileOnly('org.processing:core:3.3.7')
+}
+
+test {
+    useJUnitPlatform()
+}
